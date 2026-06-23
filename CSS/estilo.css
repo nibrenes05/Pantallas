@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#5f7fc7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.contenedor{
+    width:900px;
+    height:500px;
+    display:flex;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo{
+    width:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo img{
+    width:280px;
+}
+
+.form-login{
+    width:50%;
+    background:linear-gradient(135deg,#4b7be5,#2d4f9b);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.icono-usuario img{
+    width:100px;
+    margin-bottom:20px;
+}
+
+form{
+    width:70%;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+   
+}
+
+
+.controles{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-bottom:2px solid white;
+    background:transparent;
+    color:white;
+    outline:none;
+}
+
+.opciones{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    font-size:14px;
+}
+
+.opciones a{
+    color:white;
+    text-decoration:none;
+}
+
+.boton{
+    width:100%;
+    padding:12px;
+    background:#3c36c9;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.boton:hover{
+    background:#2f2aa8;
+}
+.contenedor-password{
+    position: relative;
+}
+
+.ojo{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.controles::placeholder{
+    color: white;
+    opacity: 0.5;
+}
