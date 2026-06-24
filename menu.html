@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteShop - Menú Principal</title>
+
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="body-app">
+
+    <div class="app">
+
+        <aside class="menu-lateral">
+
+            <div class="marca">
+                <i class="bi bi-bag-check-fill"></i>
+                <h2>ByteShop</h2>
+            </div>
+
+            <nav class="navegacion">
+                <a href="#" class="activo">
+                    <i class="bi bi-house-door"></i>
+                    Dashboard
+                </a>
+
+                <a href="crearUsuario.html">
+                    <i class="bi bi-people"></i>
+                    Usuarios
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-building"></i>
+                    Empresas
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-person-lines-fill"></i>
+                    Clientes
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-box-seam"></i>
+                    Productos
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-cart3"></i>
+                    Pedidos
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-truck"></i>
+                    Envíos
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-headset"></i>
+                    Casos
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-megaphone"></i>
+                    Campañas
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-bar-chart-line"></i>
+                    Reportes
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-clipboard-data"></i>
+                    Auditoría
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-gear"></i>
+                    Configuración
+                </a>
+            </nav>
+
+        </aside>
+
+        <main class="contenido">
+
+            <header class="barra-superior">
+
+                <div>
+                    <h1>Dashboard principal</h1>
+                </div>
+
+                <div class="usuario-sesion">
+                    <i class="bi bi-bell"></i>
+
+                    <div class="perfil">
+                        <div class="avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <span>Administrador</span>
+                        </div>
+
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+
+            </header>
+
+            <section class="area-principal">
+
+                <div class="bienvenida-dashboard">
+
+                    <div>
+                        <h2>Bienvenido a ByteShop</h2>
+                        <p>
+                            Aquí puedes ver un resumen rápido de usuarios, clientes, pedidos,
+                            productos, pagos, envíos y casos del CRM.
+                        </p>
+                    </div>
+
+                    <div class="fecha-dashboard">
+                        <i class="bi bi-calendar3"></i>
+                        <span>Panel administrativo</span>
+                    </div>
+
+                </div>
+
+                <div class="tarjetas-dashboard">
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica azul">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <div>
+                            <p>Usuarios activos</p>
+                            <h3>128</h3>
+                            <span>Registrados en el CRM</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica verde">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+
+                        <div>
+                            <p>Clientes activos</p>
+                            <h3>86</h3>
+                            <span>Compradores habilitados</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica morado">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <div>
+                            <p>Empresas</p>
+                            <h3>14</h3>
+                            <span>Vendedores registrados</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica naranja">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+
+                        <div>
+                            <p>Productos</p>
+                            <h3>342</h3>
+                            <span>Disponibles en catálogo</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica azul">
+                            <i class="bi bi-cart3"></i>
+                        </div>
+
+                        <div>
+                            <p>Pedidos del mes</p>
+                            <h3>57</h3>
+                            <span>Órdenes registradas</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica verde">
+                            <i class="bi bi-cash-coin"></i>
+                        </div>
+
+                        <div>
+                            <p>Ventas estimadas</p>
+                            <h3>₡4.8M</h3>
+                            <span>Según monto total</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica rojo">
+                            <i class="bi bi-headset"></i>
+                        </div>
+
+                        <div>
+                            <p>Casos abiertos</p>
+                            <h3>9</h3>
+                            <span>Pendientes de atención</span>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-metrica">
+                        <div class="icono-metrica morado">
+                            <i class="bi bi-truck"></i>
+                        </div>
+
+                        <div>
+                            <p>Envíos en tránsito</p>
+                            <h3>21</h3>
+                            <span>Con tracking activo</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <div class="panel-dashboard grande">
+
+                        <div class="encabezado-panel">
+                            <div>
+                                <h3>Resumen de actividad</h3>
+                                <p>Información simulada basada en pedidos, pagos, casos y envíos.</p>
+                            </div>
+
+                            <button class="boton-mini">
+                                Ver reporte
+                            </button>
+                        </div>
+
+                        <div class="grafico-simple">
+
+                            <div class="barra-grafico">
+                                <span>Pedidos</span>
+                                <div class="barra-fondo">
+                                    <div class="barra-progreso pedidos"></div>
+                                </div>
+                                <strong>57</strong>
+                            </div>
+
+                            <div class="barra-grafico">
+                                <span>Pagos</span>
+                                <div class="barra-fondo">
+                                    <div class="barra-progreso pagos"></div>
+                                </div>
+                                <strong>49</strong>
+                            </div>
+
+                            <div class="barra-grafico">
+                                <span>Envíos</span>
+                                <div class="barra-fondo">
+                                    <div class="barra-progreso envios"></div>
+                                </div>
+                                <strong>21</strong>
+                            </div>
+
+                            <div class="barra-grafico">
+                                <span>Casos</span>
+                                <div class="barra-fondo">
+                                    <div class="barra-progreso casos"></div>
+                                </div>
+                                <strong>9</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="panel-dashboard">
+
+                        <div class="encabezado-panel">
+                            <div>
+                                <h3>Acciones rápidas</h3>
+                                <p>Opciones frecuentes del sistema.</p>
+                            </div>
+                        </div>
+
+                        <div class="acciones-rapidas">
+
+                            <a href="crearUsuario.html">
+                                <i class="bi bi-person-plus"></i>
+                                Crear usuario
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-building-add"></i>
+                                Registrar empresa
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-box-seam"></i>
+                                Agregar producto
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-headset"></i>
+                                Revisar casos
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid inferior">
+
+                    <div class="panel-dashboard grande">
+
+                        <div class="encabezado-panel">
+                            <div>
+                                <h3>Últimos pedidos</h3>
+                                <p>Pedidos recientes registrados en el sistema.</p>
+                            </div>
+                        </div>
+
+                        <table class="tabla-dashboard">
+                            <thead>
+                                <tr>
+                                    <th>Orden</th>
+                                    <th>Cliente</th>
+                                    <th>Estado</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>ORD-10025</td>
+                                    <td>Juan Pérez</td>
+                                    <td><span class="estado-tabla verde">Pagado</span></td>
+                                    <td>₡245,000</td>
+                                </tr>
+
+                                <tr>
+                                    <td>ORD-10024</td>
+                                    <td>María Gómez</td>
+                                    <td><span class="estado-tabla azul">Enviado</span></td>
+                                    <td>₡98,500</td>
+                                </tr>
+
+                                <tr>
+                                    <td>ORD-10023</td>
+                                    <td>Carlos Mora</td>
+                                    <td><span class="estado-tabla amarillo">Pendiente</span></td>
+                                    <td>₡315,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="panel-dashboard">
+
+                        <div class="encabezado-panel">
+                            <div>
+                                <h3>Casos recientes</h3>
+                                <p>Solicitudes de atención al cliente.</p>
+                            </div>
+                        </div>
+
+                        <div class="lista-casos">
+
+                            <div class="caso-item">
+                                <div>
+                                    <strong>CAS-0031</strong>
+                                    <p>Problema con entrega</p>
+                                </div>
+                                <span class="estado-tabla rojo">Abierto</span>
+                            </div>
+
+                            <div class="caso-item">
+                                <div>
+                                    <strong>CAS-0030</strong>
+                                    <p>Consulta de producto</p>
+                                </div>
+                                <span class="estado-tabla amarillo">En proceso</span>
+                            </div>
+
+                            <div class="caso-item">
+                                <div>
+                                    <strong>CAS-0029</strong>
+                                    <p>Solicitud de garantía</p>
+                                </div>
+                                <span class="estado-tabla verde">Resuelto</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>     </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
