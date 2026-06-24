@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteShop - Crear Usuario</title>
+
+    <link rel="stylesheet" href="CSS/estilo1.css">
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="menu-lateral">
+
+        <div class="marca">
+            <i class="bi bi-bag-check-fill"></i>
+            <h2>ByteShop</h2>
+        </div>
+
+        <nav class="navegacion">
+            <a href="#">
+                <i class="bi bi-house-door"></i>
+                Dashboard
+            </a>
+
+            <a href="#" class="activo">
+                <i class="bi bi-people"></i>
+                Usuarios
+            </a>
+
+            <a href="#">
+                <i class="bi bi-building"></i>
+                Empresas
+            </a>
+
+            <a href="#">
+                <i class="bi bi-person-lines-fill"></i>
+                Clientes
+            </a>
+
+            <a href="#">
+                <i class="bi bi-box-seam"></i>
+                Productos
+            </a>
+
+            <a href="#">
+                <i class="bi bi-cart3"></i>
+                Pedidos
+            </a>
+
+            <a href="#">
+                <i class="bi bi-credit-card"></i>
+                Pagos
+            </a>
+
+            <a href="#">
+                <i class="bi bi-truck"></i>
+                Envíos
+            </a>
+
+            <a href="#">
+                <i class="bi bi-headset"></i>
+                Casos
+            </a>
+
+            <a href="#">
+                <i class="bi bi-megaphone"></i>
+                Campañas
+            </a>
+
+            <a href="#">
+                <i class="bi bi-bar-chart-line"></i>
+                Reportes
+            </a>
+
+            <a href="#">
+                <i class="bi bi-clipboard-data"></i>
+                Auditoría
+            </a>
+
+            <a href="#">
+                <i class="bi bi-gear"></i>
+                Configuración
+            </a>
+        </nav>
+
+    </aside>
+
+    <main class="contenido">
+
+        <header class="barra-superior">
+
+            <div>
+                <h1>Mantenimiento de usuarios</h1>
+                <p>Crear usuario</p>
+            </div>
+
+            <div class="usuario-sesion">
+                <i class="bi bi-bell"></i>
+
+                <div class="perfil">
+                    <div class="avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <div>
+                        <strong>Admin</strong>
+                        <span>Administrador</span>
+                    </div>
+
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="area-principal">
+
+            <div class="breadcrumb">
+                <i class="bi bi-house-door"></i>
+                <span>Mantenimiento</span>
+                <i class="bi bi-chevron-right"></i>
+                <span>Usuarios</span>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Crear usuario</strong>
+            </div>
+
+            <div class="panel">
+
+                <div class="tabs">
+                    <button class="tab activo" onclick="cambiarTab('crear', this)">
+                        Crear usuario
+                    </button>
+
+                    <button class="tab" onclick="cambiarTab('listado', this)">
+                        Listado de usuarios
+                    </button>
+
+                    <button class="tab" onclick="cambiarTab('roles', this)">
+                        Roles y permisos
+                    </button>
+
+                    <button class="tab" onclick="cambiarTab('bitacora', this)">
+                        Bitácora
+                    </button>
+                </div>
+
+                <div id="crear" class="tab-contenido activo">
+
+                    <div class="layout-formulario">
+
+                        <form class="formulario-usuario" id="formUsuario">
+
+                            <div class="seccion-formulario">
+
+                                <h3>
+                                    <i class="bi bi-person"></i>
+                                    1. Datos personales
+                                </h3>
+
+                                <div class="grid tres-columnas">
+                                    <div class="grupo">
+                                        <label for="identificacion">Identificación <span>*</span></label>
+                                        <input type="text" id="identificacion" placeholder="Ej: 1234567890" required>
+                                    </div>
+
+                                    <div class="grupo">
+                                        <label for="nombre">Nombre <span>*</span></label>
+                                        <input type="text" id="nombre" placeholder="Ej: Juan" required>
+                                    </div>
+
+                                    <div class="grupo">
+                                        <label for="apellido">Apellido <span>*</span></label>
+                                        <input type="text" id="apellido" placeholder="Ej: Pérez" required>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="seccion-formulario">
+
+                                <h3>
+                                    <i class="bi bi-lock"></i>
+                                    2. Credenciales de acceso
+                                </h3>
+
+                                <div class="grid tres-columnas">
+
+                                    <div class="grupo">
+                                        <label for="correo">Correo electrónico <span>*</span></label>
+                                        <input type="email" id="correo" placeholder="Ej: usuario@empresa.com" required>
+                                    </div>
+
+                                    <div class="grupo">
+                                        <label for="password">Contraseña temporal <span>*</span></label>
+
+                                        <div class="campo-password">
+                                            <input type="password" id="password" placeholder="Ingrese contraseña" required>
+                                            <i class="bi bi-eye-fill" id="ojoPassword" onclick="mostrarPassword('password', 'ojoPassword')"></i>
+                                        </div>
+
+                                        <small>Mínimo 8 caracteres, mayúscula, número y símbolo.</small>
+                                    </div>
+
+                                    <div class="grupo">
+                                        <label for="confirmarPassword">Confirmar contraseña <span>*</span></label>
+
+                                        <div class="campo-password">
+                                            <input type="password" id="confirmarPassword" placeholder="Repita la contraseña" required>
+                                            <i class="bi bi-eye-fill" id="ojoConfirmar" onclick="mostrarPassword('confirmarPassword', 'ojoConfirmar')"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="seccion-formulario">
+
+                                <h3>
+                                    <i class="bi bi-shield-check"></i>
+                                    3. Rol y acceso
+                                </h3>
+
+                                <div class="grid rol-grid">
+
+                                    <div class="grupo">
+                                        <label for="rol">Tipo / Rol <span>*</span></label>
+
+                                        <select id="rol" onchange="actualizarRol()" required>
+                                            <option value="">Seleccionar rol</option>
+                                            <option value="administrador">Administrador</option>
+                                            <option value="supervisor">Supervisor</option>
+                                            <option value="agente">Agente soporte</option>
+                                            <option value="soporte">Soporte técnico</option>
+                                            <option value="adminEmpresarial">Administrador empresarial</option>
+                                            <option value="vendedor">Vendedor empresarial</option>
+                                            <option value="cliente">Cliente comprador</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="grupo">
+                                        <label for="estado">Estado <span>*</span></label>
+
+                                        <select id="estado" required>
+                                            <option value="activo">Activo</option>
+                                            <option value="inactivo">Inactivo</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="vista-permisos">
+                                        <h4>
+                                            Permisos que se asignarán
+                                            <small>(vista previa)</small>
+                                        </h4>
+
+                                        <div class="badges" id="permisosPreview">
+                                            <span class="badge azul">
+                                                <i class="bi bi-person-gear"></i>
+                                                Gestión de usuarios
+                                            </span>
+
+                                            <span class="badge verde">
+                                                <i class="bi bi-bar-chart"></i>
+                                                Reportes
+                                            </span>
+
+                                            <span class="badge morado">
+                                                <i class="bi bi-headset"></i>
+                                                Soporte
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="seccion-formulario">
+
+                                <h3>
+                                    <i class="bi bi-card-list"></i>
+                                    4. Información complementaria
+                                </h3>
+
+                                <div class="subpanel">
+
+                                    <div class="subpanel-titulo">
+                                        <span id="mensajeRol">
+                                            Estos campos pueden variar según el rol seleccionado.
+                                        </span>
+                                    </div>
+
+                                    <div class="grid cuatro-columnas">
+
+                                        <div class="grupo">
+                                            <label for="empresa">Empresa</label>
+
+                                            <select id="empresa">
+                                                <option value="">Seleccionar empresa</option>
+                                                <option>ByteShop Interno</option>
+                                                <option>TechNova S.A.</option>
+                                                <option>Digital Market CR</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="grupo">
+                                            <label for="codigoEmpleado">Código de empleado</label>
+                                            <input type="text" id="codigoEmpleado" placeholder="Ej: EMP-00125">
+                                        </div>
+
+                                        <div class="grupo">
+                                            <label for="departamento">Departamento</label>
+
+                                            <select id="departamento">
+                                                <option value="">Seleccionar departamento</option>
+                                                <option>Administración</option>
+                                                <option>Soporte</option>
+                                                <option>Ventas</option>
+                                                <option>IT</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="grupo">
+                                            <label for="puesto">Puesto</label>
+                                            <input type="text" id="puesto" placeholder="Ej: Analista de soporte">
+                                        </div>
+
+                                        <div class="grupo">
+                                            <label for="fechaIngreso">Fecha de ingreso</label>
+                                            <input type="date" id="fechaIngreso">
+                                        </div>
+
+                                        <div class="grupo">
+                                            <label for="telefono">Teléfono</label>
+                                            <input type="text" id="telefono" placeholder="Ej: 8888-8888">
+                                        </div>
+
+                                        <div class="grupo ancho-doble">
+                                            <label for="direccion">Dirección</label>
+                                            <input type="text" id="direccion" placeholder="Ej: Heredia, Costa Rica">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="grupo">
+                                        <label for="observaciones">Observaciones</label>
+                                        <textarea id="observaciones" placeholder="Información adicional opcional"></textarea>
+                                    </div>
+
+                                    <label class="switch-linea">
+                                        <input type="checkbox" checked>
+                                        <span class="switch"></span>
+                                        Enviar credenciales por correo
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                        <aside class="panel-derecho">
+
+                            <div class="card-info azul-card">
+                                <div class="icono-card">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+
+                                <div>
+                                    <h4>Validaciones automáticas</h4>
+                                    <ul>
+                                        <li>Campos obligatorios</li>
+                                        <li>Formato de correo</li>
+                                        <li>Correo no duplicado</li>
+                                        <li>Contraseña segura</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card-info verde-card">
+                                <div class="icono-card">
+                                    <i class="bi bi-check-lg"></i>
+                                </div>
+
+                                <div>
+                                    <h4>Al guardar</h4>
+                                    <p>
+                                        El sistema asignará permisos según el rol y habilitará el acceso del usuario.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card-info amarillo-card">
+                                <div class="icono-card">
+                                    <i class="bi bi-info-lg"></i>
+                                </div>
+
+                                <div>
+                                    <h4>Importante</h4>
+                                    <p>
+                                        La creación del usuario quedará registrada en la bitácora de auditoría.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="acciones">
+                                <button type="button" class="boton-principal" onclick="guardarUsuario()">
+                                    <i class="bi bi-floppy"></i>
+                                    Guardar usuario
+                                </button>
+
+                                <button type="button" class="boton-secundario" onclick="limpiarFormulario()">
+                                    <i class="bi bi-brush"></i>
+                                    Limpiar
+                                </button>
+
+                                <button type="button" class="boton-secundario">
+                                    <i class="bi bi-x-lg"></i>
+                                    Cancelar
+                                </button>
+                            </div>
+
+                        </aside>
+
+                    </div>
+
+                </div>
+
+                <div id="listado" class="tab-contenido">
+                    <div class="placeholder">
+                        <i class="bi bi-table"></i>
+                        <h3>Listado de usuarios</h3>
+                        <p>En esta pestaña se mostrará la consulta, edición y mantenimiento de usuarios registrados.</p>
+                    </div>
+                </div>
+
+                <div id="roles" class="tab-contenido">
+                    <div class="placeholder">
+                        <i class="bi bi-person-lock"></i>
+                        <h3>Roles y permisos</h3>
+                        <p>En esta sección se podrán administrar los permisos asignados por cada rol del sistema.</p>
+                    </div>
+                </div>
+
+                <div id="bitacora" class="tab-contenido">
+                    <div class="placeholder">
+                        <i class="bi bi-clipboard-data"></i>
+                        <h3>Bitácora de auditoría</h3>
+                        <p>Esta pestaña registrará acciones como creación, modificación o desactivación de usuarios.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div class="mensaje" id="mensajeSistema">
+    Usuario creado correctamente.
+</div>
+
+<script src="JS/users.js"></script>
+</body>
+</html>
